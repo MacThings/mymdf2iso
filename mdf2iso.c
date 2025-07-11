@@ -6,10 +6,61 @@
 #define VERSION "0.3.0"
 #define _FILE_OFFSET_BITS 64
 
-const char SYNC_HEADER[12] = { (char) 0x00, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0xFF, (char) 0x00 };
-const char SYNC_HEADER_MDF_AUDIO[12] = { (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0xC0, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80 };
-const char SYNC_HEADER_MDF[12] = { (char) 0x80, (char) 0xC0, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0xC0, (char) 0x80, (char) 0x80, (char) 0x80, (char) 0x80 };
-const char ISO_9660[8] = { (char) 0x01, (char) 0x43, (char) 0x44, (char) 0x30, (char) 0x30, (char) 0x31, (char) 0x01, (char) 0x00 };
+const char SYNC_HEADER[12] = {
+    (char) 0x00,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0xFF,
+    (char) 0x00
+};
+
+const char SYNC_HEADER_MDF_AUDIO[12] = {
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0xC0,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80
+};
+
+const char SYNC_HEADER_MDF[12] = {
+    (char) 0x80,
+    (char) 0xC0,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0xC0,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80,
+    (char) 0x80
+};
+
+const char ISO_9660[8] = {
+    (char) 0x01,
+    (char) 0x43,
+    (char) 0x44,
+    (char) 0x30,
+    (char) 0x30,
+    (char) 0x31,
+    (char) 0x01,
+    (char) 0x00
+};
 
 void toc_file(char *destfilename, int sub) {
     char destfiletoc[1024], destfiledat[1024];
